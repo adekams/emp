@@ -1,0 +1,59 @@
+/* body{
+    font-size: 16px;
+} */
+.brand-name{
+    font-family: 'Great Vibes', cursive;
+    /* text-transform: uppercase; */
+    font-weight: 900;
+}
+.nabar .active{
+    background-color: #4285F4;
+    color: #fff;
+}
+.rounded-circle{
+    width: 30px;
+    height: 30px;
+}
+ul{
+    list-style: none;
+}
+
+#first-part .container-fluid{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0 , 0, 0.5)), url("https://content.shopback.com/ph/wp-content/uploads/2015/05/shoes.jpg")fixed no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0;
+   height: 100vh;
+}
+
+#contact-us{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0 , 0, 0.5)),  url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")fixed no-repeat center center;
+    position: relative;
+    background-size: cover;
+    padding: 8rem 0;
+}
+
+div.masthead .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+
+}
+
+.carousel-inner{
+    width: 100%;
+    max-height: 700px;
+} 
+#carousel-section .carousel img{
+    width: 100%;
+}
+
+.bg-light{
+    background-color: #eaeeff !important;
+}
+.add-item{
+    text-transform: capitalize;
+}
