@@ -1,38 +1,39 @@
 $(document).ready(function () {
-    //open pages
-    $('#contact-page').click(function(){
-      $('#contact-us').show();
-      $('#about').hide();
-      $('#home-page').hide();
-      $('#shop').hide();
-      $('#checkout').hide();
-    })
+  //open pages
+  $('#contact-page').click(function(){
+    $('#contact-us').show();
+    $('#about').hide();
+    $('#home-page').hide();
+    $('#shop').hide();
+    $('#checkout').hide();
+  })
 
-    $('#about-page').click(function(){
-      $('#about').show();
-      $('#contact-us').hide();
-      $('#home-page').hide();
-      $('#shop').hide();
-      $('#checkout').hide();
-    })
+  $('#about-page').click(function(){
+    $('#about').show();
+    $('#contact-us').hide();
+    $('#home-page').hide();
+    $('#shop').hide();
+    $('#checkout').hide();
+  })
 
-    $('#pay').click(function(){
-      $('#checkout').show();
-      $('#about').hide();
-      $('#home-page').hide();
-      $('#contact-us').hide();
-      $('#shop').hide();
-    })
+  $('#pay').click(function(){
+    $('#checkout').show();
+    $('#about').hide();
+    $('#home-page').hide();
+    $('#contact-us').hide();
+    $('#shop').hide();
+  })
 
-    $('#our-products').click(function(){
-      $('#shop').show();
-      $('#about').hide();
-      $('#home-page').hide();
-      $('#contact-us').hide();
-      $('#checkout').hide();
-    })
+  $('#our-products').click(function(){
+    $('#shop').show();
+    $('#about').hide();
+    $('#home-page').hide();
+    $('#contact-us').hide();
+    $('#checkout').hide();
+  })
     
-  });
+});
+
 
 //remove button
 var removeCartItemBtns = document.getElementsByClassName("remove-btn")
@@ -107,7 +108,7 @@ function addItemToCart(title, price, imageSrc){
       <div class="col-md-5 col-lg-3 col-xl-3">
         <div class="view zoom overlay z-depth-1 mb-3 mb-md-0">
           <img class="img-fluid w-100 product-image" src="${imageSrc}" alt="Sample">
-          <a href="#!">
+          <a href="#">
             <div class="mask">
               <img class="img-fluid w-100 product-image" src="${imageSrc}" alt="Sample">
               <div class="mask rgba-black-slight"></div>
@@ -119,33 +120,32 @@ function addItemToCart(title, price, imageSrc){
       <div>
         <h5 class="product-title">${title}</h5>
         <div class="d-flex justify-content-between">
+
+          <form action="">
+            <div class="form-group">
+              <label for="">Size</label>
+              <select class="custom-select" name="size">
+                <option selected>Select one</option>
+                <option value="38">38</option>
+                <option value="30">39</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+          </form>
+
           <div>
-            
-            <form action="">
-              <div class="form-group">
-                <label for="">Size</label>
-                <select class="custom-select" name="size">
-                  <option selected>Select one</option>
-                  <option value="38">38</option>
-                  <option value="30">39</option>
-                  <option value="40">40</option>
-                </select>
-              </div>
-            </form>
-          </div>
-          <div>
-            <div class="def-number-input number-input safari_only mb-0">
+            <div class="def-number-input number-input safari_only mb-0 ml-2">
               <p class="mb-2">Quantity</p>
-              <input class="quantity" value="1" type="number">
+              <input class="quantity form-control" value="1" type="number">
             </div>
           </div>
         </div>
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <a href="#!" type="button" class="card-link-secondary small text-uppercase remove-btn mr-3 text-danger"><i
-                class="fas fa-trash-alt mr-1"></i> Remove item </a>
+            <a href="#" type="button" class="card-link-secondary small text-uppercase remove-btn mr-3 text-danger"><i
+                class="fas fa-trash-alt mr-1"></i> Remove item</a>
           </div>
-          <span class="product-price"><strong>${price}</strong> </span>
+          <span class="product-price">${price}</span>
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@ function updateCartTotal(){
 
     total = total + (price * quantity) 
     
-    taxTotal = total + (total * 0.07)
+    taxTotal = total + (total * 0.075)
   }
   total = Math.round(total * 100) / 100
   taxTotal = Math.round(taxTotal * 100) / 100
