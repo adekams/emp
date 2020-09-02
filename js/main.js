@@ -1,5 +1,8 @@
 $(document).ready(function () {
   //open pages
+  $('.update-total').click(function() {
+    updateCartTotal()
+  })
   $('#contact-page').click(function(){
     $('#contact-us').show();
     $('#about').hide();
